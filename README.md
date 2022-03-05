@@ -1,2 +1,0 @@
-# atbarker.github.io
-website
