@@ -1,0 +1,131 @@
+body {
+	background-color:#586e75;
+}
+
+/* This sections designates the fonts for the page*/
+#header .title, #footer .contact,  #header .tagline, #nav, .content p.entry-title, .content p.date {
+	font-family: 'Courier New', monospace;
+}
+
+.content p  {
+	font-family: Times New Roman;
+}
+
+.content i {
+	font-style: italic;
+}
+
+
+/*Below deesignates the styles for each of the HTML items */
+
+#container {
+	width:1200px;
+	margin: 0 auto;
+	background-color:#fdf6e3;
+	height:100%;
+}
+
+#nav {
+	width: 1200px;
+	margin: 0 auto;
+	background-color:#073642;
+	height: 30px;
+	padding: 0px;
+	margin-bottom: 20px;
+}
+
+#nav ul {
+	list-style:none;
+	margin-left:60px;
+}
+
+#nav li a {
+	float:left;
+	color: #93a1a1;
+	font-size: 20px;
+	text-decoration:none;
+	padding-right: 140px;
+	margin-top:20px;
+}
+
+
+#header {
+	height: 100px;
+	text-align: left;
+	padding: 20px;
+	font-weight: 500;
+	background-image: url('./bground.jpg');
+}
+
+#header .title {
+	font-size:50px;
+	color:#859900;
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+
+#header .tagline {
+	font-size:18px;
+	color:#859900;
+	font-weight: 800;
+	margin-bottom:5px;
+	margin-left: 20px;
+}
+
+.content {
+	width: 1000px;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+
+.content p.entry-title {
+	font-size: 30px;
+	color: #3D5771; 
+	margin-bottom: 10px;
+	margin-top: 15px;
+	margin-left:5px;
+}
+
+.content p.subsection {
+	font-size: 20px; 
+	margin-bottom: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left:5px;
+}
+.content p.first{
+	text-indent:3em;
+}
+
+.content p.footer{
+	color: #859900;
+}
+
+.content p {
+	font-size:16px;
+	line-height: 16px;
+	color: #565656;
+	margin-left: 15px;
+	margin-right: 20px;
+}
+
+.content a {
+	font-size: 16px;
+	line-height: 16px;
+	color: #2aa198;
+	margin-left: 15px;
+	margin-right: 20px;
+}
+
+.content img.displayed {
+	position:relative;
+	margin-top: 20px;	
+}
+
+
+#footer {
+	margin: 0 auto;
+	height: 352px;
+	width: 1200px;
+	background-color:#073642;
+}

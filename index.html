@@ -1,0 +1,167 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+	<title>Austen Barker</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel = "stylesheet" type = "text/css" href = "style.css" media="screen"/>
+</head>
+<body>
+
+	<header class="flexcol">
+		<div style="width:100%">
+			<br>
+			<h3 style="display: inline;"><a href="/" style="color: #073642;">Austen Barker</a></h3> &nbsp; &nbsp; &nbsp;
+			Computer Science Ph.D student
+		</div>
+	</header>
+
+	<div class="flexcol">
+		<div style="width:32%">
+                        <br>
+			<div class="image-cropper">
+				<img src="profile-pic-1.jpg" />
+			</div>
+		</div>
+
+		<div style="width: 25%">
+			<div style="height: 45px"><p><strong>Education: </strong></p></div>
+			<div style="height: 60px"><p><strong>Current Research: </strong></p></div>
+			<div style="height: 65px"><p><strong>Research Interests: </strong></p></div>
+			<div style="height: 45px"><p><strong>Contact: </strong></p></div>
+                        <div style="height: 55px"><p><strong>Links:</strong></p></div>
+		</div>
+
+		<div style="width: 43%; text-align: left">
+			<div style="height: 45px"><p>B.S. Computer Science (2017, UCSC)<br>M.S. Computer Science (2018, UCSC)</p></div>
+			<div style="height: 60px"><p>Steganographic, deniable, and secure storage systems (<a href="https://www.ssrc.ucsc.edu/proj/Artifice.html">Artifice</a>).</p></div>
+			<div style="height: 65px"><p>Kernel development, security, cryptography, operating systems, and breaking things.</p></div>
+			<div style="height: 45px"><p>Email: atbarker at ucsc.edu<br>Office: Engineering 2 383</p></div>
+                        <div style="height: 55px"><p><a href="https://github.com/atbarker">Github</a><br>
+                                                     <a href="https://www.linkedin.com/in/austen-barker-b93b038a/">Linkedin</a><br>
+                                                     <a href="https://www.ssrc.ucsc.edu/person/atbarker.html">SSRC</a><br>
+                                                     <a href="https://drive.google.com/file/d/1FNd4s79klvuqXzz2gt1DtTUYNcOqjEtH/view?usp=sharing">Resume</a>
+                                                  </p>
+                        </div>
+		</div>
+	</div>
+
+	<br>
+
+	<p>
+	  I am a fifth year Computer Science Ph.D candidate under Darrell Long and 
+          work in the Storage Systems Research Center at UC Santa Cruz. My research 
+          is primarily in the development of a deniable steganographic storage 
+          system (<a href="https://www.ssrc.ucsc.edu/proj/Artifice.html">Artifice</a>) 
+          but also branches into secure file systems and network based covert 
+          timing channels (Vinz Clortho). 
+        </p>
+        <p>
+          Outside of research I also enjoy vintage computing, fishing, backpacking, 
+          and getting caught up in niche hobbies and DIY projects.
+	</p>
+	<hr>
+	<div>
+                <h3>Projects</h3>
+                
+                <h4>Artifice</h4>
+                <p>The challenge of deniability for sensitive data can be a life 
+                   or death issue depending on location. Plausible deniability 
+                   directly impacts groups such as democracy advocates relaying 
+                   information in repressive regimes, journalists covering human 
+                   rights stories in a war zone, and NGO workers hiding food 
+                   shipment schedules from violent militias. All of whom would 
+                   benefit from a plausibly deniable storage system. Previous 
+                   deniable storage solutions only offer pieces of an 
+                   implementable solution. 
+                </p>
+                <p>
+                   Artifice operates through the use of a virtual block device 
+                   driver stored separately from the hidden data. It uses external 
+                   entropy sources and erasure codes to deniably and reliably 
+                   store data within the unallocated space of an existing file 
+                   system. A set of data blocks to be hidden are combined with 
+                   entropy blocks through error correcting codes to produce a set 
+                   of obfuscated carrier blocks that are indistinguishable from 
+                   other pseudorandom blocks on the disk. A subset of these blocks 
+                   may then be used to reconstruct the data. Artifice presents a 
+                   truly deniable storage solution through its use of external 
+                   entropy and error correcting codes, while providing better 
+                   reliability than other deniable storage systems. 
+                </p>
+                <p>
+                   Artifice is implemented as a Linux Device Mapper target and is 
+                   distributed as a loadable Linux kernel module. It is intended 
+                   to be installed on a bootable Live disk and be used alongside a 
+                   distribution such as Tails. It will support NTFS, EXT4, and FAT32 
+                   as public file systems. Artifice source code will be released 
+                   under GPL upon completion.
+                </p>
+                <h4>Vinz Clortho</h4>
+                <p>
+                   Covert timing channels present a means of securely transferring 
+                   sensitive data, such as encryption keys, between nodes in a 
+                   distributed system without detection from an adversary. Typically 
+                   timing channels are used by an adversary to exfiltrate data, and 
+                   the majority of security research on this topic has pursued their 
+                   detection and disruptive capabilities. We show that, when used in 
+                   a distributed system with especially high volume of network traffic, 
+                   covert timing channels can be an effective means to reestablish 
+                   security when a system's network infrastructure has been compromised.
+                </p>
+                <p>
+                   Vinz Clortho is a system independent, TCP Handshake based, Linux 
+                   Netfilter kernel module designed to measure inter-node latency, 
+                   covertly transmit a message through manipulating packet latency, and 
+                   then rebuild that message using Reed-Solomon encoding. Vinz Clortho 
+                   can communicate a secret message reliably, albeit slowly, while still 
+                   maintaining the ability to remain undetected.
+                </p>
+                <h4>CRDT Experiments</h4>
+                <p>
+                   Experimental implementation and observations pertaining to a 
+                   Add-Remove Partial Order graph Conflict Free Replicated Data Type as 
+                   described by Shapiro et al. in the paper A Comprehensive Study of 
+                   Convergent and Commutative Replicated Data Types. This work was for 
+                   Professor Lindsey Kuper's CMPS 290s seminar.
+                </p>
+                <p>
+                   <a href="http://composition.al/CMPS290S-2018-09/2018/11/12/implementing-a-garbage-collected-graph-crdt-part-1-of-2.html">Part 1</a> and 
+                   <a href="http://composition.al/CMPS290S-2018-09/2018/12/08/implementing-a-garbage-collected-graph-crdt-part-2-of-2.html">Part 2</a>
+                </p>
+                <hr>
+		<h3>Publications</h3>
+                <p>
+		   "A Multiple Snapshot Attack on Deniable Storage Systems," Kyle Fredrickson, Austen Barker, Darrell D. E. Long. Proceedings of the 29th 
+		   International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS '21), November 2021.
+                </p>
+		<p>
+		   "Rethinking the Adversary and Operational Characteristics of Deniable Storage," Austen Barker, James Hughes, Ethan L. Miller, Darrell D. E. Long.
+	           Journal of Surveillance, Security, and Safety (JSSS), Volume 2, pages 42-65, 2021.
+		</p>
+		<p>
+		   "Artifice: Data in Diguise," Austen Barker, Yash Gupta, Sabrina Au, Eugene Chou, Ethan L. Miller, Darrell D. E. Long. Proceedings of the
+                   36th International Conference on Massive Storage System and Technology (MSST '20), October 2020.
+		</p>
+		<p>
+                   <a href="https://www.usenix.org/conference/foci19/presentation/barker">"Artifice: A Deniable Steganographic File System."</a> 
+                   Austen Barker, Staunton Sample, Yash Gupta, Anastasia McTaggart, Ethan L. Miller, and Darrel D. E. Long. Proceedings of the 
+                   9th USENIX Workshop on Free and Open Communications on the Internet (FOCI '19), August 2019.
+                </p>
+	</div>
+
+	<footer>
+
+	    <div class="flexcol">
+		<div style="width: 20%"><p><a href="/">Home</a></p></div>
+		<div style="width: 70%; text-align: right;">
+			<p style="color: #888;">© Austen Barker <span id="curyear">2017</span> <img class="displayed" src="vieditor.gif" ></p>
+                </div>
+	    </div>
+	</footer>
+	<script>
+		document.getElementById("curyear").textContent = (new Date()).getFullYear();
+	</script>
+</body>
+</html>
