@@ -6,8 +6,35 @@
 	<title>Austen Barker</title>
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel = "stylesheet" type = "text/css" href = "css/style.css" media="screen"/>
+    <script src="jquery.js"></script> 
+    <script> 
+    $(function () {
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = 'html/' + $(this).data('include') + '.html'
+        $(this).load(file)
+      })
+    })
+    </script>
 </head>
 <body>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Research
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="html/sum.html">Summaries</a>
+      <a href="html/artifice.html">Artifice</a>
+      <a href="https://www.crss.ucsc.edu/proj/securefs.html">Lethe</a>
+      <a href="#">Vinz Clortho</a>
+      <a href="http://composition.al/CMPS290S-2018-09/2018/11/12/implementing-a-garbage-collected-graph-crdt-part-1-of-2.html">CRDTs</a>
+    </div>
+  </div>
+  <a href="html/pubs.html">Publications</a>
+</div>
 
 	<header class="flexcol">
 		<div style="width:100%">
