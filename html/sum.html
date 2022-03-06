@@ -1,0 +1,140 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+	<title>Austen Barker</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" media="screen"/>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Research
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="sum.html">Summaries</a>
+      <a href="artifice.html">Artifice</a>
+      <a href="https://www.crss.ucsc.edu/proj/securefs.html">Lethe</a>
+      <a href="#">Vinz Clortho</a>
+      <a href="http://composition.al/CMPS290S-2018-09/2018/11/12/implementing-a-garbage-collected-graph-crdt-part-1-of-2.html">CRDTs</a>
+    </div>
+  </div>
+  <a href="pubs.html">Publications</a>
+</div>
+	<div>
+                <h3>Research Projects</h3>
+                <hr>
+                
+                <h4>Artifice</h4>
+                <p>The challenge of deniability for sensitive data can be a life 
+                   or death issue depending on location. Plausible deniability 
+                   directly impacts groups such as democracy advocates relaying 
+                   information in repressive regimes, journalists covering human 
+                   rights stories in a war zone, and NGO workers hiding food 
+                   shipment schedules from violent militias. All of whom would 
+                   benefit from a plausibly deniable storage system. Previous 
+                   deniable storage solutions only offer pieces of an 
+                   implementable solution. 
+                </p>
+                <p>
+                   Artifice operates through the use of a virtual block device 
+                   driver stored separately from the hidden data. It uses external 
+                   entropy sources and erasure codes to deniably and reliably 
+                   store data within the unallocated space of an existing file 
+                   system. A set of data blocks to be hidden are combined with 
+                   entropy blocks through error correcting codes to produce a set 
+                   of obfuscated carrier blocks that are indistinguishable from 
+                   other pseudorandom blocks on the disk. A subset of these blocks 
+                   may then be used to reconstruct the data. Artifice presents a 
+                   truly deniable storage solution through its use of external 
+                   entropy and error correcting codes, while providing better 
+                   reliability than other deniable storage systems. 
+                </p>
+                <p>
+                   Artifice is implemented as a Linux Device Mapper target and is 
+                   distributed as a loadable Linux kernel module. It is intended 
+                   to be installed on a bootable Live disk and be used alongside a 
+                   distribution such as Tails. It will support NTFS, EXT4, and FAT32 
+                   as public file systems. Artifice source code will be released 
+		   under GPL upon completion.<br>
+
+		   <a href="https://github.com/atbarker/Artifice">Source Code</a>
+                </p>
+		<h4>Lethe</h4>
+		<p>
+		    Modern day general data privacy regulations state that people can request for
+                    data pertaining to them to be deleted without undue delay. Existing storage
+                    systems are not equipped to handle secure deletes and tend to leave traces of
+                    deleted data for indeterminant periods of time. Current approaches to secure
+                    deletion, repeated overwrite and encryption, are also unsatisfactory. Flash
+                    media makes the former especially difficult. SSDs typically allocate new
+                    blocks for data, providing logical overwrite, but not overwriting physical
+                    flash pages. In place overwrites on flash are costly and negatively impact
+                    endurance.
+                </p>
+		<p>
+                    Encryption is an alternative to provide secure deletion. Data is securely
+                    deleted if the encryption key used to encrypt the data is forgotten. For a
+                    file system, this typically entails at least one key per file. This is
+                    problematic when block modifications occur as any modification requires a
+                    complete re-encryption of the entire file with a new key. To provide a finer
+                    granularity, per block encryption keys can be used as well, but quickly turns
+                    into a larger key management problem. To address these shortcomings, we
+                    propose Lethe, a new system designed to provide efficient key management and
+                    secure deletion in file systems, regardless of storage medium, by utilizing
+                    keyed hash trees. Using keyed hash trees, Lethe is able to provide secure
+  		    deletion at a block-level granularity, only requiring that exactly one key
+  		    needs to be remembered and able to be securely forgotten.
+		</p>
+                <h4>Vinz Clortho</h4>
+                <p>
+                   Covert timing channels present a means of securely transferring 
+                   sensitive data, such as encryption keys, between nodes in a 
+                   distributed system without detection from an adversary. Typically 
+                   timing channels are used by an adversary to exfiltrate data, and 
+                   the majority of security research on this topic has pursued their 
+                   detection and disruptive capabilities. We show that, when used in 
+                   a distributed system with especially high volume of network traffic, 
+                   covert timing channels can be an effective means to reestablish 
+                   security when a system's network infrastructure has been compromised.
+                </p>
+                <p>
+                   Vinz Clortho is a system independent, TCP Handshake based, Linux 
+                   Netfilter kernel module designed to measure inter-node latency, 
+                   covertly transmit a message through manipulating packet latency, and 
+                   then rebuild that message using Reed-Solomon encoding. Vinz Clortho 
+                   can communicate a secret message reliably, albeit slowly, while still 
+                   maintaining the ability to remain undetected.
+                </p>
+                <h4>CRDT Experiments</h4>
+                <p>
+                   Experimental implementation and observations pertaining to a 
+                   Add-Remove Partial Order graph Conflict Free Replicated Data Type as 
+                   described by Shapiro et al. in the paper A Comprehensive Study of 
+                   Convergent and Commutative Replicated Data Types. This work was for 
+                   Professor Lindsey Kuper's CMPS 290s seminar.
+                </p>
+                <p>
+                   <a href="http://composition.al/CMPS290S-2018-09/2018/11/12/implementing-a-garbage-collected-graph-crdt-part-1-of-2.html">Part 1</a> and 
+                   <a href="http://composition.al/CMPS290S-2018-09/2018/12/08/implementing-a-garbage-collected-graph-crdt-part-2-of-2.html">Part 2</a>
+                </p>
+	</div>
+
+	<footer>
+
+	    <div class="flexcol">
+		<div style="width: 20%"><p><a href="/">Home</a></p></div>
+		<div style="width: 70%; text-align: right;">
+			<p style="color: #888;">© Austen Barker <span id="curyear">2017</span> <img class="displayed" src="images/vieditor.gif" ></p>
+                </div>
+	    </div>
+	</footer>
+	<script>
+		document.getElementById("curyear").textContent = (new Date()).getFullYear();
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+	<title>Austen Barker</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" media="screen"/>
+    <script src="jquery.js"></script> 
+    <script> 
+    $(function () {
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = 'html/' + $(this).data('include') + '.html'
+        $(this).load(file)
+      })
+    })
+    </script>
+</head>
+<body>
+
+    <div data-include="nav"></div>
+	<div>
+		<h3>Publications</h3>
+                <p>
+		<a href="https://www.ssrc.ucsc.edu/media/pubs/b5d2cdef04702983d608a8f3ca2994db1fc22f2d.pdf">"A Multiple Snapshot Attack on Deniable Storage Systems."</a> 
+		   Kyle Fredrickson, Austen Barker, Darrell D. E. Long. Proceedings of the 29th 
+		   International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS '21), November 2021.
+                </p>
+		<p>
+		   <a href="https://jsssjournal.com/article/view/4080">"Rethinking the Adversary and Operational Characteristics of Deniable Storage."</a> Austen Barker, James Hughes, Ethan L. Miller, Darrell D. E. Long.
+	           Journal of Surveillance, Security, and Safety (JSSS), Volume 2, pages 42-65, 2021.
+		</p>
+		<p>
+		<a href="https://storageconference.us/2020/Papers/03.Artifice.pdf">"Artifice: Data in Diguise."</a> Austen Barker, Yash Gupta, Sabrina Au, Eugene Chou, Ethan L. Miller, Darrell D. E. Long. Proceedings of the
+                   36th International Conference on Massive Storage System and Technology (MSST '20), October 2020.
+		</p>
+		<p>
+                   <a href="https://www.usenix.org/conference/foci19/presentation/barker">"Artifice: A Deniable Steganographic File System."</a> 
+                   Austen Barker, Staunton Sample, Yash Gupta, Anastasia McTaggart, Ethan L. Miller, and Darrel D. E. Long. Proceedings of the 
+                   9th USENIX Workshop on Free and Open Communications on the Internet (FOCI '19), August 2019.
+                </p>
+	</div>
+
+	<footer>
+
+	    <div class="flexcol">
+		<div style="width: 100%; text-align: right;">
+			<p style="color: #888;">© Austen Barker <span id="curyear">2017</span> <img class="displayed" src="images/vieditor.gif" ></p>
+                </div>
+	    </div>
+	</footer>
+	<script>
+		document.getElementById("curyear").textContent = (new Date()).getFullYear();
+	</script>
+</body>
+</html>
