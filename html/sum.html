@@ -25,38 +25,22 @@
                 <hr>
                 
                 <h4>Artifice</h4>
-                <p>The challenge of deniability for sensitive data can be a life 
-                   or death issue depending on location. Plausible deniability 
-                   directly impacts groups such as democracy advocates relaying 
-                   information in repressive regimes, journalists covering human 
-                   rights stories in a war zone, and NGO workers hiding food 
-                   shipment schedules from violent militias. All of whom would 
-                   benefit from a plausibly deniable storage system. Previous 
-                   deniable storage solutions only offer pieces of an 
-                   implementable solution. 
+                <p>Journalists, aid workers, and democracy advocates all put themselves in harm’s way for the benefit of others. Yet, there is a glaring need for them to store data securely. Typically, private data is protected with encryption that is assumed unbreakable. Yet, if those in a hostile environment are caught with encrypted data, they could be forced to comply through coercion or threats of bodily harm. We propose to secure data in plain sight by hiding it so that the operating system doesn’t even know it’s there. Therefore, the owner can completely deny the existence of the data. 
                 </p>
                 <p>
-                   Artifice operates through the use of a virtual block device 
-                   driver stored separately from the hidden data. It uses external 
-                   entropy sources and erasure codes to deniably and reliably 
-                   store data within the unallocated space of an existing file 
-                   system. A set of data blocks to be hidden are combined with 
-                   entropy blocks through error correcting codes to produce a set 
-                   of obfuscated carrier blocks that are indistinguishable from 
-                   other pseudorandom blocks on the disk. A subset of these blocks 
-                   may then be used to reconstruct the data. Artifice presents a 
-                   truly deniable storage solution through its use of external 
-                   entropy and error correcting codes, while providing better 
-                   reliability than other deniable storage systems. 
+A variety of previously developed systems have been designed in an attempt to address this problem. In the process of navigating the compromises inherent to plausibly deniable storage, each of these systems have demonstrated distinctive “tells” that enable a skilled adversary with knowledge of their design to quickly discover them. Since carrying encrypted files or dedicated hardware can be inherently suspicious, a deniable storage system must be hidden within a publicly visible file system or storage device to maintain plausible deniability. It is highly suspicious if there are visible drivers or firmware, unconventional partitioning schemes, excess unusable space in a file system, or unexplained changes to the disk’s free space. To avoid suspicion, the hidden volume must operate in such a way that the encapsulating file system and operating system are entirely unaware of the hidden file system’s existence, even when faced with a detailed forensic examination.
+                </p>
+                <p>
+We take a step toward the goal of applying deniable storage systems to safeguard users by addressing the above requirements with Artifice, a block device that provides functional plausible deniablility for both hidden data and the Artifice driver itself. To access a hidden volume, the user boots into a separate, Artifice-aware operating system through a Linux live USB drive which provides effective isolation from the host OS. Unlike earlier systems, this does not leave behind suspicious drivers on the user’s machine and mitigates the impact of malware and information leakage to the public volume. As the public file system cannot be aware of Artifice’s existence, Artifice must protect itself from damage due to overwrites by public operations. Information Dispersal Algorithms (such as Shamir Secret Sharing) provide Artifice overwrite tolerance through the inclusion of redundant blocks and enable a self repair process whenever the user boots the Artifice-aware OS. The overwrites still occur, but don’t cause irreparable harm.
                 </p>
                 <p>
                    Artifice is implemented as a Linux Device Mapper target and is 
                    distributed as a loadable Linux kernel module. It is intended 
                    to be installed on a bootable Live disk and be used alongside a 
-                   distribution such as Tails. It will support NTFS, EXT4, and FAT32 
-                   as public file systems. Artifice source code will be released 
-		   under GPL upon completion.<br>
-
+                   distribution such as Tails. Currently it is compatible with FAT32 and 
+                   EXT4 file systems.
+               <br>
+           <br>
 		   <a href="https://github.com/atbarker/Artifice">Source Code</a>
                 </p>
 		<h4>Lethe</h4>
