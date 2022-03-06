@@ -141,9 +141,9 @@ img.displayed {
 .navbar a {
   float: left;
   font-size: 16px;
-  color: white;
+  color: #fdf6e3;
   text-align: center;
-  padding: 14px 16px;
+  padding: 16px 16px;
   text-decoration: none;
 }
 
@@ -167,7 +167,7 @@ img.displayed {
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #dc322f;
 }
 
 /* Dropdown content (hidden by default) */
@@ -192,7 +192,7 @@ img.displayed {
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #93a1a1;
 }
 
 /* Show the dropdown menu on hover */
