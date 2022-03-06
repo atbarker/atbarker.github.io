@@ -34,7 +34,7 @@
 		</div>
 
 		<div style="width: 43%; text-align: left">
-			<div style="height: 60px"><p>B.S. Computer Science (2017, UCSC)<br>M.S. Computer Science (2018, UCSC)<br>Ph.D. Computer Science (ongoing, UCSC)</p></div>
+			<div style="height: 60px"><p>Ph.D. Computer Science, ongoing expected graduation in 2022, UCSC<br>M.S. Computer Science, 2018, UCSC<br>B.S. Computer Science, 2017, UCSC</p></div>
 			<div style="height: 45px"><p>Steganographic, deniable, and secure storage systems (<a href="https://www.ssrc.ucsc.edu/proj/Artifice.html">Artifice</a>).</p></div>
 			<div style="height: 65px"><p>Kernel development, security, cryptography, operating systems, and breaking things.</p></div>
 			<div style="height: 60px"><p>Email: atbarker at ucsc.edu<br>austenbarker at yahoo.com<br>Office: Engineering 2 383</p></div>
@@ -103,7 +103,29 @@
                 </p>
 		<h4>Lethe</h4>
 		<p>
-		   Secure Deletion through keyed hash trees.
+		    Modern day general data privacy regulations state that people can request for
+                    data pertaining to them to be deleted without undue delay. Existing storage
+                    systems are not equipped to handle secure deletes and tend to leave traces of
+                    deleted data for indeterminant periods of time. Current approaches to secure
+                    deletion, repeated overwrite and encryption, are also unsatisfactory. Flash
+                    media makes the former especially difficult. SSDs typically allocate new
+                    blocks for data, providing logical overwrite, but not overwriting physical
+                    flash pages. In place overwrites on flash are costly and negatively impact
+                    endurance.
+                </p>
+		<p>
+                    Encryption is an alternative to provide secure deletion. Data is securely
+                    deleted if the encryption key used to encrypt the data is forgotten. For a
+                    file system, this typically entails at least one key per file. This is
+                    problematic when block modifications occur as any modification requires a
+                    complete re-encryption of the entire file with a new key. To provide a finer
+                    granularity, per block encryption keys can be used as well, but quickly turns
+                    into a larger key management problem. To address these shortcomings, we
+                    propose Lethe, a new system designed to provide efficient key management and
+                    secure deletion in file systems, regardless of storage medium, by utilizing
+                    keyed hash trees. Using keyed hash trees, Lethe is able to provide secure
+  		    deletion at a block-level granularity, only requiring that exactly one key
+  		    needs to be remembered and able to be securely forgotten.
 		</p>
                 <h4>Vinz Clortho</h4>
                 <p>
