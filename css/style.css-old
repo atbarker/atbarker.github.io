@@ -1,0 +1,201 @@
+#nav {
+	width: 1200px;
+	margin: 0 auto;
+	background-color:#073642;
+	height: 50px;
+	padding: 0px;
+	margin-bottom: 20px;
+}
+
+#nav ul {
+	list-style:none;
+	margin-left:60px;
+}
+
+#nav li a {
+	float:left;
+	color: #93a1a1;
+	font-size: 20px;
+	text-decoration:none;
+	padding-right: 140px;
+	margin-top:20px;
+}
+
+
+
+body, footer {
+	font-family: 'Helvetica', sans-serif;
+	margin:10px auto;
+	max-width:800px;
+	min-width: 800px;
+	line-height:1.25;
+	font-size:18px;
+	/*color:#444;*/
+	color:#586e75;
+	padding:0 10px;
+	/*background-color: #ecf0f1;*/
+	background-color: #fdf6e3;
+
+}
+
+footer {
+	font-size: 14px;
+	position: relative;
+	bottom: 0;
+	width: 95%;
+}
+
+strong {
+    color:073642;
+}
+
+.panel {
+	border-style: solid;
+	border-color: #ccc;
+    border-width: 1px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Helvetica', sans-serif;
+	line-height:1.2;
+        color: #073642;
+}
+
+a {
+	text-decoration:none;
+	transition: all .1s ease-in;	
+}
+
+a:link, a:visited {
+    //color: #2980b9;
+    color: #268bd2;
+}
+
+/* mouse over link */
+a:hover {
+    //color: #7f8c8d;
+    color: #93a1a1;
+}
+
+/* selected link */
+a:active {
+    color: #e74c3c;
+}
+
+hr {
+	background-color: #ccc;
+	height: 2px;
+	border: none;
+}
+
+.flexcol {
+	display: flex;
+	justify-content: space-between;
+}
+
+.divider {
+  width: 2px;
+  margin: 6px 0;
+  margin-top: 4%;
+  margin-bottom: 3%;
+  background: #ccc;
+}
+
+.image-cropper {
+    width: 240px;
+    height: 370px;
+    position: relative;
+    overflow: hidden;
+    //border-radius: 50%;
+}
+
+img.displayed {
+        position:relative;
+        margin-top: 20px;
+}
+
+img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+img.displayed {
+        position:relative;
+        margin: 0;
+        height: 1%;
+        width: auto;
+}
+
+ /* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #073642;
+  font-family: Helvetica;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
